@@ -1,0 +1,17 @@
+// px to rem v.1
+
+@function rem($pixels, $context: $mainFontSize) {
+    @if (unitless($pixels)) {
+      $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+      $context: $context * 1px;
+    }
+    @return $pixels / $context * 1rem;
+  }
+
+// px to rem v.2
+
+@function rem($px) {
+    @return ($px / 16) +rem;
+}
