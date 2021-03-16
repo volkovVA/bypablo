@@ -1,0 +1,44 @@
+include ../../components/budget-btn/budget-btn.pug
+
+-
+  const mainPhotosTop = [
+  {src:'./img/photo_11.jpg', alt:'habitación'},
+  {src:'./img/photo_10.jpg', alt:'balcón'},
+  {src:'./img/photo_9.jpg', alt:'dormitorio'},
+  {src:'./img/photo_8.jpg', alt:'cocina'},
+  ]
+
+-
+  const mainPhotosBottom = [
+  {src:'./img/photo_4.jpg', alt:'calle'},
+  {src:'./img/photo_10.jpg', alt:'balcón'},
+  {src:'./img/photo_3.jpg', alt:'sala'},
+  {src:'./img/photo_2.jpg', alt:'baño'},
+  ]
+
+-
+  const mainTexts = [
+    'Quieres aumentar el número de visitas',
+    'Pocas llamadas después del anuncio',
+    'Necesitas vender un piso más rápido',
+    'Quieres que tu anuncio destaque',
+    'Las fotos del móvil se ven poco atractivas'
+    ]
+
+main.main
+  ul.main__list
+    each photo in mainPhotosTop
+      li.main__item
+        img.main__photo(src= photo.src alt= photo.alt)
+  .main__desc
+    ul.main__list-text
+      each text in mainTexts
+        li.main__item-text= text
+    span.main__answer ?
+    .main__budget
+      +budget-btn
+      span.main__budget-text Responde 3 preguntas para calcular el precio
+  ul.main__list
+    each photo in mainPhotosBottom
+      li.main__item
+        img.main__photo(src= photo.src alt= photo.alt)

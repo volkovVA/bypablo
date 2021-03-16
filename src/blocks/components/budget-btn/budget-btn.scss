@@ -1,0 +1,27 @@
+.budget-btn {
+  position: relative;
+  @include font-source (rem(36), 500);
+  background: transparent;
+  outline: none;
+  border: 0;
+  color: $default-color;
+  &::before, &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+  }
+  &::before {
+    background-image: url('../../../img/svg/corner-left.svg');
+    bottom:-4px;
+    left: -16px;
+  }
+  &::after {
+    background-image: url('../../../img/svg/corner-right.svg');
+    top: -4px;
+    right: -16px;
+  }
+}
