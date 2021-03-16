@@ -1,0 +1,36 @@
+@import "../../../styles/helpers/media";
+
+.header {
+  height: rem(380);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  &__logo {
+    grid-area: 1/1/3/2;
+    align-self: end;
+  }
+  &__contact {
+    position: relative;
+    justify-self: end;
+    align-self: center;
+    margin-right: rem(100);
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 32%;
+      left: 104%;
+      height: 10px;
+      width: rem(124);
+      background: $default-color;
+    }
+  }
+  &__title {
+    @include font-source (rem(34), 400);
+    text-align: right;
+    text-transform: uppercase;
+    width: rem(580);
+    justify-self: end;
+    align-self: end;
+  }
+}
