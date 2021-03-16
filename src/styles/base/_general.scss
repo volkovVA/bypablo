@@ -71,4 +71,8 @@ p {
   position: relative;
   min-width: 320px;
   overflow: hidden;
-  }
+}
+
+.title {
+  @include font-source (rem(48), 500);
+}

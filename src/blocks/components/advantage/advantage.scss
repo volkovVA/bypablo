@@ -1,0 +1,44 @@
+.advantage {
+  position: relative;
+  &__title {
+    position: absolute;
+    right: 54%;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 27%;
+      left: -35%;
+      height: 10px;
+      width: rem(182);
+      background: $default-color;
+    }
+  }
+  &__block {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item-text {
+    width: rem(704);
+    font-weight: 300;
+    margin-bottom: rem(136);
+    text-align: right;
+    &:nth-child(1) {
+      padding-top: rem(150);
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__item-image {
+    width: rem(640);
+    height: rem(350);
+    margin-bottom: rem(26);
+  }
+  &__photo {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

@@ -18,12 +18,12 @@ include ../../components/budget-btn/budget-btn.pug
 
 -
   const mainTexts = [
-    'Quieres aumentar el número de visitas',
-    'Pocas llamadas después del anuncio',
-    'Necesitas vender un piso más rápido',
-    'Quieres que tu anuncio destaque',
-    'Las fotos del móvil se ven poco atractivas'
-    ]
+  'Quieres aumentar el número de visitas',
+  'Pocas llamadas después del anuncio',
+  'Necesitas vender un piso más rápido',
+  'Quieres que tu anuncio destaque',
+  'Las fotos del móvil se ven poco atractivas'
+  ]
 
 main.main
   ul.main__list
@@ -38,6 +38,7 @@ main.main
     .main__budget
       +budget-btn
       span.main__budget-text Responde 3 preguntas para calcular el precio
+  include ../../components/advantage/advantage.pug
   ul.main__list
     each photo in mainPhotosBottom
       li.main__item

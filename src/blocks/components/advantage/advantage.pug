@@ -1,0 +1,25 @@
+-
+  const advantageListText = [
+    'Desde hace más de 6 años he trabajado en el sector de los interiores e inmobiliaria. Esto me ha permitido centrarme en este ámbito y tener un conocimiento mucho más profundo de los detalles de la toma y la edición.',
+    'Mis fotos venden porque elijo los mejores ángulos y sé cómo capturar correctamente cualquier espacio. Toda la serie dará una imagen completa del apartamento y reducirá las dudas del cliente.',
+    'Fotografío con eficiencia y garantizo la entrega de las fotos en 2 días laborales (para pedidos de hasta 25 fotos).	Al mismo tiempo, cada imagen se procesa individualmente con un resultado pulido y atractivo.',
+    'Ofrezco una galería con previstas de la cual puedes elegir las fotos mas destacables, lo que te permitirá sacar el máximo partido a cada sesión fotográfica. Válido para encargos a partir de 20 fotos.'
+  ]
+
+-
+  const advantageListPhoto = [
+    {src:'./img/photo_7.jpg', alt:'dormitorio'},
+    {src:'./img/photo_6.jpg', alt:'entrada'},
+    {src:'./img/photo_5.jpg', alt:'balcón'}
+  ]
+
+section.advantage
+  h2.title.advantage__title POR QUÉ ME ELIGEN A MÍ?
+  .advantage__block
+    ul.advantage__list-text
+      each item in advantageListText
+        li.advantage__item-text= item
+    ul.advantage__list-photo
+      each item in advantageListPhoto
+        li.advantage__item-image
+          img.advantage__photo(src= item.src alt= item.alt)
