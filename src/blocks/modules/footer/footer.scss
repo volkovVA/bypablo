@@ -1,0 +1,12 @@
+.footer {
+  height: rem(300);
+  .logo {
+    margin-left: auto;
+    margin-right: 10%;
+    &::after {
+      height: rem(160);
+      top: 96%;
+      left: 38%;
+    }
+  }
+}
