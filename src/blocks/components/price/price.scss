@@ -1,0 +1,48 @@
+.price {
+  &__title {
+    position: relative;
+    margin-bottom: rem(96);
+    margin-left: 22%;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 27%;
+      left: -32%;
+      height: 10px;
+      width: rem(340);
+      background: $default-color;
+    }
+  }
+  &__column {
+    display: flex;
+  }
+  &__list {
+    flex-basis: 50%;
+  }
+  &__item {
+    margin-bottom: rem(50);
+    text-align: right;
+    &:first-child {
+      width: 96%;
+      margin-left: auto;
+    }
+    &:last-child {
+      width: 90%;
+      margin-left: auto;
+    }
+  }
+  &__click {
+    color: $default-color;
+  }
+  &__box {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__btn {
+    margin-right: rem(46);
+  }
+}

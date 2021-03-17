@@ -1,0 +1,16 @@
+.contact-list {
+  &__item {
+    position: relative;
+    margin-bottom: rem(24);
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 27%;
+      left: -24%;
+      height: 10px;
+      width: rem(36);
+      background: $default-color;
+    }
+  }
+}

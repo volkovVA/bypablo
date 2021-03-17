@@ -9,6 +9,7 @@
   &__list {
     position: relative;
     flex-basis: 50%;
+    margin-bottom: rem(296);
     &::before, &::after {
       content: '';
       position: absolute;
