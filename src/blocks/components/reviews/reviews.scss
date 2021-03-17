@@ -1,0 +1,38 @@
+.reviews {
+  display: flex;
+  &__title {
+    font-size: rem(60);
+    align-self: center;
+    padding: 0 rem(190);
+    flex-basis: 50%;
+  }
+  &__list {
+    position: relative;
+    flex-basis: 50%;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      background-image: url('../../../img/svg/quotes.svg');
+      width: rem(70);
+      height: rem(70);
+      background-size: rem(70) rem(70);
+      background-repeat: no-repeat;
+    }
+    &::before {
+      left: -14%;
+      top: -6%;
+    }
+    &::after {
+      right: 20%;
+      bottom: 10%;
+    }
+  }
+  &__item {
+    font-size: rem(40);
+    margin-bottom: rem(86);
+    &:last-child {
+      width: rem(500);
+    }
+  }
+}

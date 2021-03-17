@@ -1,10 +1,22 @@
 .steps {
   &__title {
+    position: relative;
     margin-bottom: rem(180);
     text-align: right;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 26%;
+      left: 65%;
+      height: rem(286);
+      width: rem(10);
+      background: $default-color;
+    }
   }
   &__list {
     display: flex;
+    justify-content: center;
     margin-bottom: rem(328);
   }
   &__text {

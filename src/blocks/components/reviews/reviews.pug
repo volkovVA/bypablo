@@ -1,0 +1,12 @@
+-
+  const reviewsList = [
+    'El anuncio se ve más atractivo!',
+    'Recibimos más llamadas!',
+    'Aumentan las visitas y vendemos más rápido!'
+  ]
+
+section.reviews
+  h2.title.reviews__title LO QUE DICEN MIS CLIENTES:
+  ul.reviews__list
+    each item in reviewsList
+      li.reviews__item= item
