@@ -3,8 +3,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: rem(170);
-    margin-bottom: rem(200);
+    margin-top: rem(178);
+    margin-bottom: rem(236);
     @include media-tablet {
       margin-top: rem(100);
       margin-bottom: rem(80);
@@ -34,8 +34,8 @@
           &::after {
             width: rem(46);
             height: rem(12);
-            bottom: 26%;
-            left: rem(-46);
+            bottom: 23%;
+            left: -6%;
             @include media-tablet {
               width: rem(8);
               height: rem(14);
@@ -51,9 +51,9 @@
         &:nth-child(2) {
           &::after {
             width: rem(12);
-            height: rem(16);
-            bottom: rem(-12);
-            right: 26%;
+            height: rem(20);
+            bottom: -3%;
+            right: 29%;
             @include media-tablet {
               width: rem(38);
               height: rem(8);
@@ -67,15 +67,16 @@
         }
         &:last-child {
           &::after {
-            width: rem(46);
+            width: rem(50);
             height: rem(12);
-            bottom: 26%;
-            right: rem(-46);
+            bottom: 25%;
+            right: -5%;
           }
         }
       }
     }
     &--bottom {
+      margin-bottom: rem(188);
       .main__item {
         @include media-mobile {
           &:nth-child(3) {

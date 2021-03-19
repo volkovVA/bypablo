@@ -12,32 +12,32 @@
     position: absolute;
     content: '';
     display: block;
-    background-size: 15px 15px;
+    background-size: rem(20) rem(20);
     background-repeat: no-repeat;
-    width: 15px;
-    height: 15px;
+    width: rem(20);
+    height: rem(20);
     @include media-mobile {
-      background-size: 10px 10px;
-      width: 10px;
-      height: 10px;
+      background-size: rem(10) rem(10);
+      width: rem(10);
+      height: rem(10);
     }
   }
   &::before {
     background-image: url('../../../img/svg/corner-left.svg');
-    bottom:-4px;
-    left: -16px;
+    bottom:rem(-12);
+    left: rem(-20);
     @include media-mobile {
-      bottom:-5px;
-      left: -7px;
+      bottom:rem(-5);
+      left: rem(-7);
     }
   }
   &::after {
     background-image: url('../../../img/svg/corner-right.svg');
-    top: -4px;
-    right: -16px;
+    top: rem(-8);
+    right: rem(-16);
     @include media-mobile {
-      top:-7px;
-      right: -5px;
+      top: rem(-7);
+      right: rem(-5);
     }
   }
 }

@@ -1,7 +1,8 @@
 .contact-list {
   &__item {
     position: relative;
-    margin-bottom: rem(24);
+    @include font-source (rem(26), 300);
+    margin-bottom: rem(13);
     &:last-child {
       margin-bottom: 0;
     }

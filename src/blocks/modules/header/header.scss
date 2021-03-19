@@ -18,7 +18,7 @@
     }
   }
   &__title {
-    @include font-source (rem(36), 400);
+    @include font-source (rem(34), 400);
     width: rem(580);
     text-align: right;
     text-transform: uppercase;
@@ -46,14 +46,15 @@
     justify-self: end;
     align-self: center;
     margin-right: rem(100);
+    padding-top: rem(22);
     &::after {
       content: '';
       display: block;
       position: absolute;
       width: rem(124);
       height: rem(12);
-      top: 32%;
-      left: 106%;
+      top: 62%;
+      left: 100%;
       background: $default-color;
       @include media-tablet {
         width: rem(140);

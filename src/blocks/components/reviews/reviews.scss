@@ -1,7 +1,7 @@
 .reviews {
   display: flex;
   justify-content: center;
-  padding-bottom: rem(180);
+  padding-bottom: rem(270);
   @include media-tablet {
     display: block;
     padding-bottom: 0;
@@ -11,7 +11,7 @@
     width: 50%;
     font-size: rem(60);
     align-self: center;
-    padding: 0 rem(200);
+    padding: 0 rem(250) rem(54) rem(130);
     &::after {
       @include media-tablet {
         content: '';
@@ -49,9 +49,9 @@
       position: absolute;
       display: block;
       background-image: url('../../../img/svg/quotes.svg');
-      width: rem(70);
-      height: rem(70);
-      background-size: rem(70) rem(70);
+      width: rem(80);
+      height: rem(80);
+      background-size: rem(80) rem(80);
       background-repeat: no-repeat;
       @include media-tablet {
         width: rem(50);
@@ -65,8 +65,8 @@
       }
     }
     &::before {
-      left: -14%;
-      top: -6%;
+      left: -17%;
+      top: -9%;
       @include media-tablet {
         left: 3%;
         top: -10%;
@@ -77,8 +77,8 @@
       }
     }
     &::after {
-      right: 10%;
-      bottom: 10%;
+      right: 1%;
+      bottom: 8%;
       @include media-tablet {
         right: 28%;
         bottom: -8%;
@@ -100,7 +100,7 @@
   }
   &__item {
     font-size: rem(40);
-    margin-bottom: rem(86);
+    margin-bottom: rem(64);
     &:last-child {
       width: rem(500);
       @include media-tablet{

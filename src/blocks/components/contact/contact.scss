@@ -11,6 +11,8 @@
     }
   }
   &__address {
+    font-size: rem(22);
+    margin-right: rem(18);
     @include media-tablet {
       display: block;
       margin-top: rem(-6);

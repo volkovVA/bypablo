@@ -2,7 +2,7 @@
   position: relative;
   &__title {
     position: absolute;
-    right: 54%;
+    right: 52%;
     @include media-tablet {
       font-size: rem(36);
       right: 0;
@@ -37,7 +37,7 @@
   }
   &__block {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: rem(210);
     @include media-tablet {
       position: relative;
@@ -58,8 +58,8 @@
   &__item-text {
     width: rem(704);
     font-weight: 300;
-    margin-bottom: rem(136);
-    margin-right: rem(10);
+    margin-bottom: rem(152);
+    margin-right: rem(128);
     text-align: right;
     @include media-tablet {
       margin-bottom: rem(460);
@@ -74,7 +74,7 @@
       margin-bottom: rem(200);
     }
     &:nth-child(1) {
-      padding-top: rem(150);
+      padding-top: rem(136);
       @include media-tablet {
         padding-top: rem(100);
       }
