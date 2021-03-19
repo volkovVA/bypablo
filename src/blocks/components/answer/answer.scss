@@ -73,9 +73,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding-right: rem(212);
-    padding-bottom: rem(60);
+    padding-top: rem(80);
+    padding-bottom: rem(140);
     @include media-tablet {
       flex-direction: row-reverse;
       justify-content: space-between;
@@ -85,8 +86,6 @@
   }
   &__text {
     width: rem(272);
-    margin-top: rem(44);
-    margin-bottom: rem(30);
     @include media-mobile {
       width: rem(160);
       font-size: rem(12);

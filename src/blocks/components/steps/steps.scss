@@ -89,7 +89,7 @@
       }
       .steps__text {
         width: rem(140);
-        top: 61%;
+        top: 60%;
         right: 6%;
         text-align: right;
         @include media-mobile {
@@ -110,7 +110,7 @@
         right: -3%;
       }
     }
-    &:nth-child(4) {
+    &:last-child {
       @include media-tablet {
         padding-left: rem(380);
       }
@@ -120,7 +120,7 @@
       .steps__text {
         width: rem(200);
         top: 44%;
-        right: -13%;
+        right: -26%;
         text-align: right;
         @include media-mobile {
           width: 80%;
@@ -130,7 +130,7 @@
     }
   }
   &__icon {
-    height: rem(200);
+    height: rem(216);
     fill: $main-color;
     fill-opacity: 0.1;
     &--color {

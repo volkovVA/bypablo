@@ -5,8 +5,21 @@
   outline: none;
   border: 0;
   color: $default-color;
+  transition: ease-in-out .2s;
   @include media-mobile {
     font-size: rem(16);
+  }
+  &:hover {
+    font-size: rem(38);
+    transition: ease-in-out .2s;
+    &::before {
+      bottom: rem(-2);
+      left: rem(-10);
+    }
+    &::after {
+      top: rem(-1);
+      right: rem(-10);
+    }
   }
   &::before, &::after {
     position: absolute;
@@ -16,6 +29,7 @@
     background-repeat: no-repeat;
     width: rem(20);
     height: rem(20);
+    transition: ease-in-out .2s;
     @include media-mobile {
       background-size: rem(10) rem(10);
       width: rem(10);

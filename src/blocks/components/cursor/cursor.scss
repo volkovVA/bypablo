@@ -1,0 +1,27 @@
+$animation_reveal-duration: 1s;
+$animation_reveal-stagger: $animation_reveal-duration / 2;
+
+body {
+  cursor: url(../../../img/svg/cursor.svg), pointer;
+}
+
+.cursor {
+  $mySize: 10px;
+  width: $mySize;
+  height: $mySize;
+  background-color: $main-color;
+  animation-delay: $animation_reveal-stagger;
+  border-radius: 50%;
+  opacity: .3;
+  z-index: 9999;
+  position: absolute;
+  @media (orientation: landscape) {
+    $mySize: 10px;
+    width: $mySize;
+    height: $mySize;
+  }
+}
+
+.cursor-hidden {
+  display: none;
+}
