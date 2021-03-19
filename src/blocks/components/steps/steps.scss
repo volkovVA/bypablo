@@ -3,62 +3,146 @@
     position: relative;
     margin-bottom: rem(180);
     text-align: right;
+    @include media-tablet {
+      font-size: rem(36);
+      margin-bottom: rem(100);
+    }
+    @include media-mobile {
+      font-size: rem(22);
+      margin-bottom: rem(40);
+    }
     &::before {
       content: '';
       display: block;
       position: absolute;
-      bottom: 26%;
-      left: 65%;
-      height: rem(286);
       width: rem(10);
+      height: rem(286);
+      bottom: 0;
+      left: 65%;
       background: $default-color;
+      z-index: -1;
+      @include media-tablet {
+        width: rem(340);
+        height: rem(8);
+        left: rem(-40);
+        bottom: 20%;
+      }
+      @include media-mobile {
+        width: rem(126);
+        height: rem(4);
+        left: rem(-20);
+        bottom: rem(6);
+      }
+      @include media-custom(320px) {
+        left: -26%;
+      }
     }
   }
   &__list {
     display: flex;
-    justify-content: center;
     margin-bottom: rem(328);
+    @include media-tablet {
+      flex-direction: column;
+      margin-bottom: rem(60);
+    }
+    @include media-custom(320px) {
+      margin-bottom: rem(40);
+    }
   }
   &__text {
     position: absolute;
+    @include media-tablet {
+      position: static;
+    }
+    @include media-mobile {
+      position: static;
+      font-size: rem(16);
+    }
   }
   &__item {
     position: relative;
+    margin-right: rem(60);
+    &:last-child {
+      margin-right: 0;
+    }
+    @include media-tablet {
+      display: flex;
+      margin-bottom: rem(40);
+    }
+    @include media-mobile {
+      margin-bottom: rem(20);
+    }
     &:nth-child(1) {
       .steps__text {
         top: 27%;
-      right: -18%;
+        right: -18%;
       }
     }
     &:nth-child(2) {
+      @include media-tablet {
+        padding-left: rem(120);
+      }
+      @include media-mobile {
+        padding-left: rem(60);
+      }
       .steps__text {
         width: rem(160);
         top: 55%;
         right: 1%;
         text-align: right;
+        @include media-mobile {
+          width: 100%;
+          text-align: left;
+        }
       }
     }
     &:nth-child(3) {
+      @include media-tablet {
+        padding-left: rem(260);
+      }
+      @include media-mobile {
+        padding-left: rem(120);
+      }
       .steps__text {
         top: 13%;
         right: 11%;
       }
     }
     &:nth-child(4) {
+      @include media-tablet {
+        padding-left: rem(380);
+      }
+      @include media-mobile {
+        padding-left: rem(180);
+      }
       .steps__text {
         width: rem(160);
         top: 40%;
         right: -6%;
         text-align: right;
+        @include media-mobile {
+          width: 80%;
+          text-align: left;
+        }
       }
     }
   }
   &__icon {
+    height: rem(200);
     fill: $main-color;
     fill-opacity: 0.1;
     &--color {
       fill: $default-color;
       fill-opacity: 0.65;
+    }
+    @include media-tablet {
+      width: rem(100);
+      height: rem(100);
+      margin-right: rem(10);
+    }
+    @include media-mobile {
+      width: rem(60);
+      height: rem(60);
     }
   }
 }

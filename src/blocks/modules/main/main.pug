@@ -26,23 +26,16 @@ include ../../components/budget-btn/budget-btn.pug
   ]
 
 main.main
-  ul.main__list
+  ul.main__list.main__list--top
     each photo in mainPhotosTop
       li.main__item
         img.main__photo(src= photo.src alt= photo.alt)
-  .main__desc
-    ul.main__list-text
-      each text in mainTexts
-        li.main__item-text= text
-    span.main__answer ?
-    .main__budget
-      +budget-btn
-      span.main__budget-text Responde 3 preguntas para calcular el precio
+  include ../../components/answer/answer.pug
   include ../../components/advantage/advantage.pug
   include ../../components/steps/steps.pug
   include ../../components/reviews/reviews.pug
   include ../../components/price/price.pug
-  ul.main__list
+  ul.main__list.main__list--bottom
     each photo in mainPhotosBottom
       li.main__item
         img.main__photo(src= photo.src alt= photo.alt)

@@ -5,8 +5,22 @@
     margin-right: 10%;
     &::after {
       height: rem(160);
-      top: 96%;
+      top: rem(140);
       left: 38%;
+      @include media-tablet {
+        height: rem(120);
+        top: 100%;
+      }
+      @include media-mobile {
+        height: rem(80);
+        top: rem(60);
+      }
     }
+  }
+  @include media-tablet {
+    height: rem(220);
+  }
+  @include media-mobile {
+    height: rem(100);
   }
 }

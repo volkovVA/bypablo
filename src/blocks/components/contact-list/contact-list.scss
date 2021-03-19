@@ -2,15 +2,55 @@
   &__item {
     position: relative;
     margin-bottom: rem(24);
+    &:last-child {
+      margin-bottom: 0;
+    }
     &::before {
       content: '';
       display: block;
       position: absolute;
       bottom: 27%;
-      left: -24%;
+      left: rem(-50);
       height: 10px;
       width: rem(36);
       background: $default-color;
+      @include media-tablet {
+        height: rem(8);
+        width: rem(40);
+        left: 0;
+      }
+      @include media-mobile {
+        height: rem(4);
+        width: rem(26);
+        left: 0;
+      }
+    }
+    @include media-mobile {
+      font-size: rem(12);
+    }
+  }
+  &__name {
+    @include media-tablet {
+      padding-left: rem(60);
+    }
+    @include media-mobile {
+      padding-left: rem(40);
+    }
+  }
+  &__number {
+    @include media-tablet {
+      padding-left: rem(60);
+    }
+    @include media-mobile {
+      padding-left: rem(40);
+    }
+  }
+  &__email {
+    @include media-tablet {
+      padding-left: rem(60);
+    }
+    @include media-mobile {
+      padding-left: rem(40);
     }
   }
 }

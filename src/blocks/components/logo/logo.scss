@@ -1,12 +1,26 @@
 .logo {
   position: relative;
   width: rem(440);
-  height: rem(146);
+  @include media-tablet {
+    width: rem(300);
+  }
+  @include media-mobile {
+    width: rem(160);
+  }
   &::after {
     content: '';
     display: block;
     position: absolute;
-    width: rem(13);
+    width: rem(12);
     background: $default-color;
+    @include media-tablet {
+      width: rem(8);
+    }
+    @include media-mobile {
+      width: rem(4);
+    }
+  }
+  @include media-mobile {
+    grid-area: 1/1/2/2;
   }
 }

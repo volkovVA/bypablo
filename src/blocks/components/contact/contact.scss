@@ -1,9 +1,19 @@
 .contact {
   font-weight: 300;
-  &__number {
-    font-family: Jost;
+  @include media-mobile {
+    font-size: rem(16);
   }
   &__number {
-    margin-right: 10px;
+    font-family: Jost;
+    margin-right: rem(20);
+    @include media-mobile {
+      margin-right: 0;
+    }
+  }
+  &__address {
+    @include media-tablet {
+      display: block;
+      margin-top: rem(-6);
+    }
   }
 }

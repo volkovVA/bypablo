@@ -2,35 +2,35 @@
 
 @mixin media-mobile{
 
-  @media (min-width: $mediaWidthMobile) {
+  @media (max-width: $mediaWidthMobile) {
       @content;
   }
 }
 
 @mixin media-tablet {
 
-    @media (min-width: $mediaWidthTablet) {
+    @media (max-width: $mediaWidthTablet) {
         @content;
     }
 }
 
 @mixin media-tablet-horizontal {
 
-    @media (min-width: $mediaWidthTabletHorizontal) {
+    @media (max-width: $mediaWidthTabletHorizontal) {
         @content;
     }
 }
 
 @mixin media-laptop {
 
-    @media (min-width: $mediaWidthLaptop) {
+    @media (max-width: $mediaWidthLaptop) {
         @content;
     }
 }
 
 @mixin media-custom($width) {
 
-    @media (min-width: $width) {
+    @media (max-width: $width) {
         @content;
     }
 }
