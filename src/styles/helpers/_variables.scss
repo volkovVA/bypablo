@@ -4,8 +4,10 @@ $mainFont                : "Poppins", Helvetica, Arial, sans-serif;
 
 // Mobile first
 
+$mediaWidthMobileMin: 320px;
 $mediaWidthMobile: 375px;
 $mediaWidthTablet: 768px;
+$mediaWidthTabletMax: 1280px;
 $mediaWidthTabletHorizontal: 1024px;
 $mediaWidthLaptop: 1366px;
 

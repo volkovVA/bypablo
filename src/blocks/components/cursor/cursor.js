@@ -10,20 +10,20 @@
         let crd = boxElem.getBoundingClientRect();
 
         if (crd) {
-            if (pointerElem.classList.contains('pointer-hidden')) {
-                pointerElem.classList.remove('pointer-hidden');
+            if (pointerElem.classList.contains('cursor-hidden')) {
+                pointerElem.classList.remove('cursor-hidden');
             }
 
             pointerElem.style.transform = 'translate3d(' + mouseX + 'px, ' + mouseY + 'px, 0px)';
 
         } else {
-            pointerElem.classList.add('pointer-hidden');
+            pointerElem.classList.add('cursor-hidden');
         }
     }
 
     function disablePointer() {
         requestAnimationFrame(function hidePointer() {
-            pointerElem.classList.add('pointer-hidden');
+            pointerElem.classList.add('cursor-hidden');
         });
     }
 

@@ -17,5 +17,9 @@
       display: block;
       margin-top: rem(-6);
     }
+    @include media-mobile {
+      font-size: rem(16);
+      margin-right: 0;
+    }
   }
 }

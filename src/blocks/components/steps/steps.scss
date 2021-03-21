@@ -2,11 +2,19 @@
   &__title {
     position: relative;
     margin-bottom: rem(170);
-    padding-right: rem(46);
+    padding-right: rem(34);
     text-align: right;
+    @include media-tablet-horizontal {
+      padding-right: 0;
+      margin-bottom: rem(80);
+    }
     @include media-tablet {
       font-size: rem(36);
+      padding-right: 0;
       margin-bottom: rem(100);
+    }
+    @include media-mobile-horizontal {
+      font-size: rem(28);
     }
     @include media-mobile {
       font-size: rem(22);
@@ -19,40 +27,59 @@
       width: rem(10);
       height: rem(290);
       bottom: 20%;
-      left: 62%;
+      right: 36%;
       background: $default-color;
       z-index: -1;
-      @include media-tablet {
+      @include media-tablet-max {
         width: rem(340);
         height: rem(8);
-        left: rem(-40);
+        right: 57%;
         bottom: 20%;
+      }
+      @include media-tablet-horizontal {
+        width: rem(450);
+        height: rem(8);
+        right: 57%;
+        bottom: 20%;
+      }
+      @include media-mobile-horizontal {
+        right: 60%;
       }
       @include media-mobile {
         width: rem(126);
         height: rem(4);
-        left: rem(-20);
+        right: 72%;
         bottom: rem(6);
       }
-      @include media-custom(320px) {
+      @include media-mobile-min {
         left: -26%;
       }
     }
   }
   &__list {
     display: flex;
-    margin-bottom: rem(375);
-    @include media-tablet {
+    margin-bottom: rem(360);
+    @include media-tablet-max {
       flex-direction: column;
       margin-bottom: rem(60);
     }
-    @include media-custom(320px) {
+    @include media-tablet-horizontal {
+      flex-direction: column;
+      margin-bottom: rem(120);
+    }
+    @include media-mobile-horizontal {
+      margin-bottom: rem(40);
+    }
+    @include media-mobile-min {
       margin-bottom: rem(40);
     }
   }
   &__text {
     position: absolute;
-    @include media-tablet {
+    @include media-tablet-max {
+      position: static;
+    }
+    @include media-tablet-horizontal {
       position: static;
     }
     @include media-mobile {
@@ -67,8 +94,11 @@
     &:last-child {
       margin-right: 0;
     }
-    @include media-tablet {
+    @include media-tablet-max {
       display: flex;
+      margin-bottom: rem(40);
+    }
+    @include media-tablet-horizontal {
       margin-bottom: rem(40);
     }
     @include media-mobile {
@@ -81,8 +111,14 @@
       }
     }
     &:nth-child(2) {
-      @include media-tablet {
+      @include media-tablet-horizontal {
+        padding-left: rem(140);
+      }
+      @include media-tablet-max {
         padding-left: rem(120);
+      }
+      @include media-mobile-horizontal {
+        padding-left: rem(80);
       }
       @include media-mobile {
         padding-left: rem(60);
@@ -99,8 +135,14 @@
       }
     }
     &:nth-child(3) {
-      @include media-tablet {
+      @include media-tablet-horizontal {
+        padding-left: rem(300);
+      }
+      @include media-tablet-max {
         padding-left: rem(260);
+      }
+      @include media-mobile-horizontal {
+        padding-left: rem(180);
       }
       @include media-mobile {
         padding-left: rem(120);
@@ -111,11 +153,20 @@
       }
     }
     &:last-child {
-      @include media-tablet {
+      @include media-tablet-horizontal {
+        padding-left: rem(430);
+      }
+      @include media-tablet-max {
         padding-left: rem(380);
       }
+      @include media-mobile-horizontal {
+        padding-left: rem(270);
+      }
       @include media-mobile {
-        padding-left: rem(180);
+        padding-left: rem(190);
+      }
+      @include media-mobile-min {
+        padding-left: rem(160);
       }
       .steps__text {
         width: rem(200);
@@ -136,6 +187,10 @@
     &--color {
       fill: $default-color;
       fill-opacity: 0.65;
+    }
+    @include media-tablet-horizontal {
+      width: rem(130);
+      height: rem(130);
     }
     @include media-tablet {
       width: rem(100);

@@ -13,10 +13,10 @@ section.steps
       if index === 1
         li.steps__item
           svg.steps__icon.steps__icon--color
-            use(xlink:href="../../../img/svg/sprite.svg" + item.number)
+            use(xlink:href="./img/svg/sprite.svg" + item.number)
           span.steps__text= item.text
       else
         li.steps__item
           svg.steps__icon
-            use(xlink:href="../../../img/svg/sprite.svg" + item.number)
+            use(xlink:href="./img/svg/sprite.svg" + item.number)
           span.steps__text= item.text

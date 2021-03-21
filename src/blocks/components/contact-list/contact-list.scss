@@ -1,4 +1,10 @@
 .contact-list {
+  @include  media-tablet-horizontal {
+    padding-left: rem(60);
+  }
+  @include media-mobile-horizontal {
+    padding-left: 0;
+  }
   &__item {
     position: relative;
     @include font-source (rem(26), 300);
@@ -12,19 +18,22 @@
       position: absolute;
       bottom: 27%;
       left: rem(-50);
-      height: 10px;
       width: rem(36);
+      height: 10px;
       background: $default-color;
       @include media-tablet {
-        height: rem(8);
         width: rem(40);
+        height: rem(8);
         left: 0;
       }
       @include media-mobile {
-        height: rem(4);
         width: rem(26);
+        height: rem(4);
         left: 0;
       }
+    }
+    @include media-mobile-horizontal {
+      font-size: rem(20);
     }
     @include media-mobile {
       font-size: rem(12);

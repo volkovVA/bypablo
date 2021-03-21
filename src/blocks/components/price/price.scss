@@ -2,7 +2,10 @@
   &__title {
     position: relative;
     margin-bottom: rem(86);
-    margin-left: 22%;
+    margin-left: 23%;
+    @include media-tablet-horizontal {
+      text-align: right;
+    }
     @include media-tablet {
       font-size: rem(30);
       margin-bottom: rem(60);
@@ -19,33 +22,48 @@
       width: rem(340);
       height: rem(12);
       bottom: 44%;
-      left: -33%;
+      right: 105%;
       background: $default-color;
+      @include media-tablet-horizontal {
+        width: rem(550);
+        right: 60%;
+        bottom: 28%;
+      }
       @include media-tablet {
         width: rem(460);
         height: rem(8);
-        left: -36%;
+        bottom: 24%;
+        right: 50%;
       }
       @include media-mobile {
+        right: 55%;
         height: rem(4);
-        width: rem(210);
       }
-      @include media-custom(320px) {
-        left: -58%;
+      @include media-mobile-horizontal {
+        right: 68%;
+      }
+      @include media-mobile-min {
+        right: 64%;
       }
     }
   }
   &__column {
     display: flex;
-    @include media-tablet {
+    @include media-tablet-max {
       display: block;
     }
   }
   &__list {
     flex-basis: 50%;
-    padding-right: rem(32);
-    @include media-tablet {
+    padding-right: rem(14);
+    @include media-tablet-max {
       margin-bottom: rem(60);
+    }
+    @include media-tablet {
+      padding-right: 0;
+    }
+    @include media-mobile {
+      padding-right: 0;
     }
   }
   &__item {
@@ -80,14 +98,16 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    @include media-tablet {
+    @include media-tablet-max {
       flex-direction: row-reverse;
       align-items: flex-end;
     }
   }
   &__btn {
-    margin-right: rem(46);
     @include media-mobile {
+      margin-right: 0;
+    }
+    @include media-mobile-horizontal {
       margin-right: 0;
     }
   }

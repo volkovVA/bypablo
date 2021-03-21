@@ -1,6 +1,5 @@
 .logo {
   position: relative;
-  width: rem(440);
   @include media-tablet {
     width: rem(300);
   }
@@ -22,5 +21,13 @@
   }
   @include media-mobile {
     grid-area: 1/1/2/2;
+  }
+  &__picture {
+    width: rem(440);
+    height: rem(146);
+    @include media-tablet {
+      width: 100%;
+      height: 100%;
+    }
   }
 }

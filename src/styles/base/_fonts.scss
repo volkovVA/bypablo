@@ -6,16 +6,9 @@
 
 @font-face {
   font-family: 'Cocogoose';
-  src: url('../../fonts/Cocogoose-Classic-Medium.woff2') format('woff2'),
-      url('../../fonts/CocogooseClassic-Medium.woff') format('woff');
+  src: url('../fonts/CocogooseClassic-Medium.woff') format('woff'),
+      url('../fonts/Cocogoose-Classic-Medium.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
-}
-
-@font-face {
-  font-family: 'Cocogoose-ExtraBold';
-  src: url('../../fonts/Cocogoose-Classic-Medium.woff2') format('woff2'),
-      url('../../fonts/CocogooseClassic-Medium.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
+  font-display: swap;
 }

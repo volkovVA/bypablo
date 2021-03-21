@@ -3,9 +3,12 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: rem(178);
+    margin-top: rem(170);
     margin-bottom: rem(236);
-    @include media-tablet {
+    @include media-tablet-horizontal {
+      margin-bottom: rem(40);
+    }
+    @include media-tablet-max {
       margin-top: rem(100);
       margin-bottom: rem(80);
     }
@@ -149,7 +152,10 @@
     &:nth-child(2), &:nth-child(4) {
       margin-right: 0;
     }
-    @include media-tablet {
+    @include media-tablet-horizontal {
+      margin: rem(6) 0;
+    }
+    @include media-tablet-max {
       margin: rem(6) 0;
     }
   }
@@ -158,6 +164,11 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: rem(5);
+    border-radius: rem(6);
+    transition: ease-in-out .2s;
+    &:hover {
+      border-radius: rem(18);
+      transition: ease-in-out .2s;
+    }
   }
 }

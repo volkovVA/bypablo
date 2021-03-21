@@ -2,15 +2,22 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding-bottom: rem(114);
-  @include media-tablet {
+  padding-bottom: rem(116);
+  @include media-tablet{
     display: block;
     padding-bottom: 0;
   }
+  @include media-tablet-horizontal {
+    display: block;
+  }
   &__list {
     font-size: rem(28);
-    padding-left: rem(32);
-    @include media-tablet {
+    padding-left: rem(54);
+    @include media-tablet-max {
+      margin-bottom: rem(50);
+      padding-left: 0;
+    }
+    @include media-tablet-horizontal {
       margin-bottom: rem(50);
     }
   }
@@ -19,30 +26,39 @@
     @include media-tablet {
       margin-bottom: rem(20);
     }
+    @include media-mobile-horizontal {
+      font-size: rem(20);
+    }
     @include media-mobile {
       margin-bottom: rem(6);
       font-size: rem(14);
     }
-    &:nth-child(1) {
-      padding-left: rem(126);
-      @include media-mobile {
+    &:first-child {
+      padding-left: rem(120);
+      @include media-tablet {
         padding-left: 0;
       }
     }
     &:nth-child(2) {
       padding-left: rem(86);
+      @include media-tablet {
+        padding-left: rem(40);
+      }
       @include media-mobile {
         padding-left: rem(20);
       }
     }
     &:nth-child(3) {
       padding-left: rem(28);
-      @include media-mobile {
+      @include media-tablet {
         padding-left: 0;
       }
     }
     &:nth-child(4) {
       padding-left: rem(174);
+      @include media-tablet {
+        padding-left: rem(100);
+      }
       @include media-mobile {
         padding-left: rem(46);
       }
@@ -61,11 +77,19 @@
       top: 5%;
       right: 2%;
     }
+    @include media-tablet-horizontal {
+      position: absolute;
+      top: 0;
+      right: 2%;
+    }
+    @include media-mobile-horizontal {
+      font-size: rem(140);
+    }
     @include media-mobile {
       @include font-source (rem(78), 650);
     }
-    @include media-custom(320px) {
-      top: 35%;
+    @include media-mobile-min {
+      top: 40%;
       right: 6%;
     }
   }
@@ -75,17 +99,28 @@
     align-items: center;
     justify-content: space-around;
     padding-right: rem(212);
-    padding-top: rem(80);
+    padding-top: rem(62);
     padding-bottom: rem(140);
+    @include media-tablet-max {
+      padding: 0;
+    }
     @include media-tablet {
       flex-direction: row-reverse;
       justify-content: space-between;
+      margin-bottom: rem(60);
+    }
+    @include media-tablet-horizontal {
+      flex-direction: row-reverse;
+      justify-content: space-around;
       padding: 0;
       margin-bottom: rem(60);
     }
   }
   &__text {
     width: rem(272);
+    @include media-mobile-horizontal {
+      font-size: rem(20);
+    }
     @include media-mobile {
       width: rem(160);
       font-size: rem(12);
