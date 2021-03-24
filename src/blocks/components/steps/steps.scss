@@ -5,8 +5,7 @@
     padding-right: rem(34);
     text-align: right;
     @include media-tablet-horizontal {
-      padding-right: 0;
-      margin-bottom: rem(80);
+      font-size: rem(30);
     }
     @include media-tablet {
       font-size: rem(36);
@@ -27,20 +26,17 @@
       width: rem(10);
       height: rem(290);
       bottom: 20%;
-      right: 36%;
+      right: 38%;
       background: $default-color;
       z-index: -1;
-      @include media-tablet-max {
+      @include media-tablet {
         width: rem(340);
         height: rem(8);
         right: 57%;
         bottom: 20%;
       }
       @include media-tablet-horizontal {
-        width: rem(450);
-        height: rem(8);
-        right: 57%;
-        bottom: 20%;
+        right: 44%;
       }
       @include media-mobile-horizontal {
         right: 60%;
@@ -58,14 +54,14 @@
   }
   &__list {
     display: flex;
-    margin-bottom: rem(360);
-    @include media-tablet-max {
+    justify-content: space-around;
+    margin-bottom: rem(300);
+    @include media-tablet {
       flex-direction: column;
       margin-bottom: rem(60);
     }
     @include media-tablet-horizontal {
-      flex-direction: column;
-      margin-bottom: rem(120);
+      margin-bottom: rem(170);
     }
     @include media-mobile-horizontal {
       margin-bottom: rem(40);
@@ -76,58 +72,50 @@
   }
   &__text {
     position: absolute;
-    @include media-tablet-max {
-      position: static;
-    }
-    @include media-tablet-horizontal {
+    @include media-tablet {
       position: static;
     }
     @include media-mobile {
-      position: static;
       font-size: rem(16);
     }
   }
   &__item {
     position: relative;
     font-size: rem(32);
-    margin-right: rem(60);
-    &:last-child {
-      margin-right: 0;
-    }
-    @include media-tablet-max {
+    margin-left: rem(-120);
+    @include media-tablet {
       display: flex;
       margin-bottom: rem(40);
+      margin-left: 0;
     }
     @include media-tablet-horizontal {
-      margin-bottom: rem(40);
+      font-size: rem(26);
     }
     @include media-mobile {
       margin-bottom: rem(20);
     }
-    &:nth-child(1) {
+    &:first-child {
       .steps__text {
         top: 28%;
         right: -42%;
+        @include media-tablet-horizontal {
+          right: -24%;
+        }
       }
     }
     &:nth-child(2) {
-      @include media-tablet-horizontal {
-        padding-left: rem(140);
-      }
-      @include media-tablet-max {
-        padding-left: rem(120);
-      }
-      @include media-mobile-horizontal {
-        padding-left: rem(80);
-      }
-      @include media-mobile {
-        padding-left: rem(60);
+      @include media-tablet {
+        padding-left: 15%;
       }
       .steps__text {
         width: rem(140);
         top: 60%;
         right: 6%;
         text-align: right;
+        @include media-tablet-horizontal {
+          right: 12%;
+          top: 56%;
+        }
         @include media-mobile {
           width: 100%;
           text-align: left;
@@ -135,46 +123,28 @@
       }
     }
     &:nth-child(3) {
-      @include media-tablet-horizontal {
-        padding-left: rem(300);
-      }
-      @include media-tablet-max {
-        padding-left: rem(260);
-      }
-      @include media-mobile-horizontal {
-        padding-left: rem(180);
-      }
-      @include media-mobile {
-        padding-left: rem(120);
+      @include media-tablet {
+        padding-left: 30%;
       }
       .steps__text {
         top: 16%;
         right: -3%;
+        @include media-tablet-horizontal {
+          right: 8%;
+        }
       }
     }
     &:last-child {
-      @include media-tablet-horizontal {
-        padding-left: rem(430);
-      }
-      @include media-tablet-max {
-        padding-left: rem(380);
-      }
-      @include media-mobile-horizontal {
-        padding-left: rem(270);
-      }
-      @include media-mobile {
-        padding-left: rem(190);
-      }
-      @include media-mobile-min {
-        padding-left: rem(160);
+      @include media-tablet {
+        padding-left: 48%;
       }
       .steps__text {
         width: rem(200);
         top: 44%;
-        right: -26%;
+        right: -12%;
         text-align: right;
         @include media-mobile {
-          width: 80%;
+          width: 45%;
           text-align: left;
         }
       }
@@ -188,14 +158,12 @@
       fill: $default-color;
       fill-opacity: 0.65;
     }
-    @include media-tablet-horizontal {
-      width: rem(130);
-      height: rem(130);
-    }
     @include media-tablet {
       width: rem(100);
       height: rem(100);
-      margin-right: rem(10);
+    }
+    @include media-tablet-horizontal {
+      height: rem(160);
     }
     @include media-mobile {
       width: rem(60);

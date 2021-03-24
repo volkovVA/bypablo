@@ -2,29 +2,30 @@
   display: flex;
   justify-content: center;
   padding-bottom: rem(270);
-  @include  media-tablet-horizontal {
-    padding-bottom: 0;
-  }
   @include media-tablet {
     display: block;
     padding-bottom: 0;
   }
+  @include media-tablet-horizontal {
+    padding-bottom: rem(170);
+  }
   &__title {
     position: relative;
-    width: 50%;
     font-size: rem(60);
     align-self: center;
     padding-right: rem(260);
     padding-bottom: rem(54);
     padding-left: rem(146);
-    @include media-tablet-horizontal {
-      padding: 0;
-    }
     @include media-tablet {
       width: 100%;
-      font-size: rem(30);
+      font-size: rem(36);
       padding: 0;
       margin-bottom: rem(60);
+    }
+    @include media-tablet-horizontal {
+      padding-left: 5%;
+      padding-right: 15%;
+      padding-bottom: 5%;
     }
     @include media-mobile-horizontal {
       font-size: rem(28);
@@ -40,7 +41,7 @@
         width: rem(8);
         height: rem(60);
         top: 10%;
-        left: 66%;
+        left: 80%;
         background: $default-color;
       }
       @include media-mobile-horizontal {
@@ -96,10 +97,6 @@
     &::after {
       right: 1%;
       bottom: 8%;
-      @include media-tablet-horizontal {
-        right: -5%;
-        bottom: 8%;
-      }
       @include media-tablet {
         right: 28%;
         bottom: -8%;
@@ -135,8 +132,11 @@
       }
     }
     @include media-tablet {
-      font-size: rem(28);
+      font-size: rem(30);
       margin-bottom: rem(40);
+    }
+    @include media-tablet-horizontal {
+      font-size: rem(34);
     }
     @include media-mobile {
       font-size: rem(16);

@@ -2,10 +2,10 @@
   height: rem(300);
   &__logo {
     padding-right: rem(156);
-    @include media-tablet-horizontal {
+    @include media-tablet {
       padding-right: 0;
     }
-    @include media-tablet {
+    @include media-tablet-horizontal {
       padding-right: 0;
     }
   }
@@ -15,17 +15,13 @@
       height: rem(160);
       top: rem(140);
       left: 80.3%;
-      @include media-tablet-horizontal {
-        left: 70.3%;
-      }
       @include media-tablet {
         height: rem(120);
         top: 100%;
         left: 38%;
       }
-      @include media-mobile {
-        height: rem(80);
-        top: rem(54);
+      @include media-tablet-horizontal {
+        left: 70.3%;
       }
     }
     &__picture {

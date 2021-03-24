@@ -16,11 +16,11 @@ body {
     font-family: $mainFont;
     background-color: $mainfont-color;
     color: $main-color;
-    font-size: $mainFontSize;
     font-style: normal;
     line-height: $mainLineHeight;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-size: $mainFontSize;
 }
 
 img {

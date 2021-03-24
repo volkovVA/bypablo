@@ -6,20 +6,14 @@ body {
 }
 
 .cursor {
-  $mySize: 10px;
-  width: $mySize;
-  height: $mySize;
-  background-color: $main-color;
-  animation-delay: $animation_reveal-stagger;
-  border-radius: 50%;
-  opacity: .3;
-  z-index: 9999;
   position: absolute;
-  @media (orientation: landscape) {
-    $mySize: 10px;
-    width: $mySize;
-    height: $mySize;
-  }
+  background: url(../img/svg/cursor-orange.svg);
+  background-size: 10px 10px;
+  width: 10px;
+  height: 10px;
+  z-index: 1;
+  opacity: .5;
+  transition: ease-in .05s;
 }
 
 .cursor-hidden {
