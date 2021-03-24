@@ -8,11 +8,10 @@
     height: rem(200);
   }
   .logo {
-    position: relative;
     &::after {
       height: rem(230);
       top: rem(-240);
-      left: 47%;
+      left: 82%;
       @include media-tablet {
         height: rem(86);
         top: rem(-90);
@@ -38,6 +37,7 @@
     }
     @include media-tablet-horizontal {
       font-size: rem(30);
+      width: 100%;
     }
     @include media-mobile {
       font-size: rem(16);

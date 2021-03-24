@@ -135,10 +135,10 @@
         }
         &:nth-child(3) {
           &::after {
-            width: rem(58);
+            width: rem(100);
             height: rem(12);
             bottom: 73%;
-            left: rem(-50);
+            left: -12%;
             @include media-tablet {
               height: rem(0);
             }

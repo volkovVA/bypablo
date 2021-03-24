@@ -1,5 +1,8 @@
 .logo {
   position: relative;
+  display: block;
+  width: rem(400);
+  cursor: url(../img/svg/cursor-big.svg), pointer;
   @include media-tablet {
     width: rem(300);
   }
@@ -18,9 +21,6 @@
     @include media-mobile {
       width: rem(4);
     }
-  }
-  @include media-mobile {
-    grid-area: 1/1/2/2;
   }
   &__picture {
     width: rem(440);
