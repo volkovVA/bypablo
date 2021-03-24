@@ -475,6 +475,9 @@ p {
 
 .logo {
   position: relative;
+  display: block;
+  width: 16.66667rem;
+  cursor: url(../img/svg/cursor-big.svg), pointer;
 }
 
 .logo::after {
@@ -928,14 +931,10 @@ body {
   grid-gap: 0.66667rem;
 }
 
-.header .logo {
-  position: relative;
-}
-
 .header .logo::after {
   height: 9.58333rem;
   top: -10rem;
-  left: 47%;
+  left: 82%;
 }
 
 .header__title {
@@ -987,7 +986,7 @@ body {
 .footer .logo::after {
   height: 6.66667rem;
   top: 5.83333rem;
-  left: 80.3%;
+  left: 38%;
 }
 
 .footer .logo__picture {
@@ -1070,10 +1069,10 @@ body {
 }
 
 .main__list--bottom .main__item:nth-child(3)::after {
-  width: 2.41667rem;
+  width: 4.16667rem;
   height: 0.5rem;
   bottom: 73%;
-  left: -2.08333rem;
+  left: -12%;
 }
 
 .main__photo {
@@ -1174,6 +1173,10 @@ body {
     font-size: 0.83333rem;
   }
 
+  .cursor {
+    display: none;
+  }
+
   .aboutme__title {
     font-size: 1.25rem;
   }
@@ -1192,14 +1195,11 @@ body {
 
   .header__title {
     font-size: 1.25rem;
+    width: 100%;
   }
 
   .footer__logo {
     padding-right: 0;
-  }
-
-  .footer .logo::after {
-    left: 70.3%;
   }
 
   .main__list {
@@ -1428,6 +1428,10 @@ body {
     margin-bottom: 2.5rem;
   }
 
+  .cursor {
+    display: none;
+  }
+
   .aboutme__title {
     position: relative;
     right: 0;
@@ -1543,7 +1547,6 @@ body {
   .footer .logo::after {
     height: 5rem;
     top: 100%;
-    left: 38%;
   }
 
   .footer {
@@ -1685,10 +1688,6 @@ body {
 
   .logo::after {
     width: 0.16667rem;
-  }
-
-  .logo {
-    grid-area: 1/1/2/2;
   }
 
   .contact {
