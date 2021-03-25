@@ -4,8 +4,12 @@
     font-size: rem(16);
   }
   &__number {
+    position: relative;
     font-family: Jost;
     margin-right: rem(20);
+    padding: rem(8) 0;
+    cursor: url(../img/svg/cursor-big.svg), pointer;
+    z-index: 999;
     @include media-mobile {
       margin-right: 0;
     }

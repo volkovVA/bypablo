@@ -12,12 +12,16 @@
   .logo {
     margin-left: auto;
     &::after {
-      height: rem(160);
-      top: rem(140);
-      left: 38%;
+      height: rem(200);
+      top: rem(139);
+      left: rem(151);
       @include media-tablet {
         height: rem(120);
         top: 100%;
+        left: rem(113);
+      }
+      @include media-mobile {
+        left: rem(60);
       }
     }
     &__picture {

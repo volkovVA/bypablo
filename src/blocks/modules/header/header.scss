@@ -10,8 +10,8 @@
   .logo {
     &::after {
       height: rem(230);
-      top: rem(-240);
-      left: 82%;
+      top: rem(-232);
+      left: rem(327);
       @include media-tablet {
         height: rem(86);
         top: rem(-90);
@@ -24,7 +24,6 @@
   }
   &__title {
     @include font-source (rem(34), 400);
-    width: rem(580);
     text-align: right;
     text-transform: uppercase;
     justify-self: end;
@@ -63,7 +62,7 @@
       content: '';
       display: block;
       position: absolute;
-      width: rem(124);
+      width: rem(70);
       height: rem(12);
       top: 62%;
       left: 100%;

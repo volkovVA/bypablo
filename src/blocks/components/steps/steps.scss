@@ -4,20 +4,20 @@
     margin-bottom: rem(170);
     padding-right: rem(34);
     text-align: right;
-    @include media-tablet-horizontal {
-      font-size: rem(30);
-    }
     @include media-tablet {
       font-size: rem(36);
       padding-right: 0;
       margin-bottom: rem(100);
     }
-    @include media-mobile-horizontal {
-      font-size: rem(28);
+    @include media-tablet-horizontal {
+      font-size: rem(30);
     }
     @include media-mobile {
       font-size: rem(22);
       margin-bottom: rem(40);
+    }
+    @include media-mobile-horizontal {
+      font-size: rem(28);
     }
     &::before {
       content: '';
@@ -29,14 +29,17 @@
       right: 38%;
       background: $default-color;
       z-index: -1;
-      @include media-tablet {
-        width: rem(340);
+      @include media-custom(1560px) {
+        width: 25%;
         height: rem(8);
-        right: 57%;
+        right: 50%;
         bottom: 20%;
       }
+      @include media-tablet {
+        right: 57%;
+      }
       @include media-tablet-horizontal {
-        right: 44%;
+        right: 40%;
       }
       @include media-mobile-horizontal {
         right: 60%;

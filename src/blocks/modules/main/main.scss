@@ -37,10 +37,10 @@
         }
         &:first-child {
           &::after {
-            width: rem(100);
-            height: rem(12);
-            bottom: 23%;
-            left: -12%;
+            width: rem(12);
+            height: rem(40);
+            bottom: -6%;
+            left: 16%;
             @include media-tablet {
               width: rem(8);
               height: rem(80);
@@ -54,10 +54,10 @@
         }
         &:nth-child(2) {
           &::after {
-            width: rem(12);
-            height: rem(40);
-            bottom: -5%;
-            right: 29%;
+            width: rem(40);
+            height: rem(12);
+            bottom: 20%;
+            left: -4%;
             @include media-tablet {
               width: rem(60);
               height: rem(8);
@@ -71,10 +71,10 @@
         }
         &:last-child {
           &::after {
-            width: rem(100);
-            height: rem(12);
-            bottom: 25%;
-            right: -12%;
+            width: rem(12);
+            height: rem(100);
+            bottom: -19%;
+            right: 40%;
           }
         }
       }
@@ -89,26 +89,7 @@
         }
       }
       .main__item {
-        &:first-child {
-          position: relative;
-          &::after {
-            @include media-tablet {
-              content: '';
-              display: block;
-              position: absolute;
-              background: $default-color;
-              width: rem(60);
-              height: rem(8);
-              bottom: 30%;
-              right: -6%;
-              z-index: -1;
-            }
-            @include media-mobile {
-              height: rem(4);
-            }
-          }
-        }
-        &:nth-child(2), &:nth-child(3) {
+        &:first-child, &:nth-child(3) {
           position: relative;
           &::after {
             content: '';
@@ -118,29 +99,37 @@
             z-index: -1;
           }
         }
-        &:nth-child(2) {
+        &:first-child {
           &::after {
-            height: rem(50);
+            height: rem(40);
             width: rem(12);
             bottom: -7%;
-            right: 50%;
+            left: 30%;
             @include media-tablet {
-              width: rem(8);
-              right: 85%;
+              height: rem(8);
+              width: rem(40);
+              left: 100%;
+              bottom: 20%;
             }
             @include media-mobile {
-              width: rem(4);
+              height: rem(4);
             }
           }
         }
         &:nth-child(3) {
           &::after {
-            width: rem(100);
+            width: rem(40);
             height: rem(12);
-            bottom: 73%;
-            left: -12%;
+            bottom: 60%;
+            right: -5%;
             @include media-tablet {
-              height: rem(0);
+              width: rem(8);
+              height: rem(40);
+              bottom: 98%;
+              right: 80%;
+            }
+            @include media-mobile {
+              width: rem(4);
             }
           }
         }
@@ -152,11 +141,6 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: rem(6);
-    transition: ease-in-out .2s;
-    &:hover {
-      border-radius: rem(18);
-      transition: ease-in-out .2s;
-    }
+    border-radius: 0.15rem;
   }
 }

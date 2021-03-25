@@ -3,6 +3,7 @@
   display: block;
   width: rem(400);
   cursor: url(../img/svg/cursor-big.svg), pointer;
+  z-index: 999;
   @include media-tablet {
     width: rem(300);
   }

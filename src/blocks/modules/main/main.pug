@@ -2,18 +2,18 @@ include ../../components/budget-btn/budget-btn.pug
 
 -
   const mainPhotosTop = [
-  {src:'./img/photo_11.webp', srcjpg:'./img/photo_11.jpg', alt:'habitación'},
-  {src:'./img/photo_10.webp', srcjpg:'./img/photo_10.jpg', alt:'balcón'},
-  {src:'./img/photo_9.webp', srcjpg:'./img/photo_9.jpg', alt:'dormitorio'},
-  {src:'./img/photo_8.webp', srcjpg:'./img/photo_8.jpg', alt:'cocina'},
+    {src:'./img/photo@2x.jpeg', srcset:'./img/photo@2x.jpeg 1.25x, ./img/photo@3x.jpeg 2.25x', alt:'habitación'},
+    {src:'./img/photo@2x.jpeg', srcset:'./img/photo@2x.jpeg 1.25x, ./img/photo@3x.jpeg 2.25x', alt:'habitación'},
+    {src:'./img/photo@2x.jpeg', srcset:'./img/photo@2x.jpeg 1.25x, ./img/photo@3x.jpeg 2.25x', alt:'habitación'},
+    {src:'./img/photo@2x.jpeg', srcset:'./img/photo@2x.jpeg 1.25x, ./img/photo@3x.jpeg 2.25x', alt:'habitación'}
   ]
 
 -
   const mainPhotosBottom = [
-  {src:'./img/photo_4.webp', srcjpg:'./img/photo_4.jpg', alt:'calle'},
-  {src:'./img/photo_10.webp', srcjpg:'./img/photo_10.jpg', alt:'balcón'},
-  {src:'./img/photo_3.webp', srcjpg:'./img/photo_3.jpg', alt:'sala'},
-  {src:'./img/photo_2.webp', srcjpg:'./img/photo_2.jpg', alt:'baño'},
+    {src:'./img/photo@2x.jpeg', srcset:'./img/photo@2x.jpeg 1.25x, ./img/photo@3x.jpeg 2.25x', alt:'habitación'},
+    {src:'./img/photo@2x.jpeg', srcset:'./img/photo@2x.jpeg 1.25x, ./img/photo@3x.jpeg 2.25x', alt:'habitación'},
+    {src:'./img/photo@2x.jpeg', srcset:'./img/photo@2x.jpeg 1.25x, ./img/photo@3x.jpeg 2.25x', alt:'habitación'},
+    {src:'./img/photo@2x.jpeg', srcset:'./img/photo@2x.jpeg 1.25x, ./img/photo@3x.jpeg 2.25x', alt:'habitación'}
   ]
 
 -
@@ -29,9 +29,7 @@ main.main
   ul.main__list.main__list--top
     each photo in mainPhotosTop
       li.main__item
-        picture
-          source(src= photo.src type='image/webp')
-          img.main__photo(src= photo.srcjpg alt= photo.alt)
+        img.main__photo(src= photo.src srcset= photo.srcset alt= photo.alt)
   include ../../components/answer/answer.pug
   include ../../components/aboutme/aboutme.pug
   include ../../components/steps/steps.pug
@@ -40,6 +38,4 @@ main.main
   ul.main__list.main__list--bottom
     each photo in mainPhotosBottom
       li.main__item
-        picture
-          source(src= photo.src type='image/webp')
-          img.main__photo(src= photo.srcjpg alt= photo.alt)
+        img.main__photo(src= photo.src srcset= photo.srcset alt= photo.alt)

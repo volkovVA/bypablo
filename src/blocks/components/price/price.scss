@@ -2,9 +2,9 @@
   &__title {
     position: relative;
     margin-bottom: rem(86);
-    margin-left: 23%;
+    padding-left: 23%;
     @include media-tablet {
-      font-size: rem(30);
+      font-size: rem(36);
       margin-bottom: rem(60);
       text-align: right;
     }
@@ -12,33 +12,33 @@
       font-size: rem(30);
     }
     @include media-mobile {
-      font-size: rem(16);
+      font-size: rem(22);
       margin-bottom: rem(40);
     }
     &::before {
       content: '';
       display: block;
       position: absolute;
-      width: rem(340);
+      width: 22%;
       height: rem(12);
       bottom: 44%;
-      right: 105%;
+      left: 0%;
       background: $default-color;
       @include media-tablet {
-        width: rem(460);
+        width: 58%;
         height: rem(8);
         bottom: 24%;
-        right: 50%;
+        left: -6%
       }
       @include media-mobile {
-        right: 55%;
+        left: -16%;
         height: rem(4);
       }
       @include media-mobile-horizontal {
-        right: 68%;
+        left: -12%;
       }
       @include media-mobile-min {
-        right: 64%;
+        left: -25%;
       }
     }
   }
@@ -85,7 +85,10 @@
     }
   }
   &__click {
+    position: relative;
     color: $default-color;
+    cursor: url(../img/svg/cursor-big.svg), pointer;
+    z-index: 999;
   }
   &__box {
     flex-basis: 50%;

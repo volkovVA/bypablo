@@ -10,12 +10,12 @@
     padding-bottom: rem(170);
   }
   &__title {
+    width: 50%;
     position: relative;
     font-size: rem(60);
     align-self: center;
-    padding-right: rem(260);
+    margin-right: rem(50);
     padding-bottom: rem(54);
-    padding-left: rem(146);
     @include media-tablet {
       width: 100%;
       font-size: rem(36);
@@ -31,7 +31,8 @@
       font-size: rem(28);
     }
     @include media-mobile {
-      font-size: rem(16);
+      font-size: rem(22);
+      width: 70%;
     }
     &::after {
       @include media-tablet {
@@ -44,19 +45,16 @@
         left: 80%;
         background: $default-color;
       }
-      @include media-mobile-horizontal {
-        left: 74%;
-      }
       @include media-mobile {
         width: rem(4);
         height: rem(50);
-        left: 74%;
+        left: 90%;
       }
       @include media-mobile-horizontal {
-        left: 84%;
+        left: 78%;
       }
       @include media-mobile-min {
-        left: 86%;
+        left: 110%;
       }
     }
   }
@@ -95,11 +93,15 @@
       }
     }
     &::after {
-      right: 1%;
-      bottom: 8%;
+      right: 6%;
+      bottom: 4%;
       @include media-tablet {
-        right: 28%;
+        right: 24%;
         bottom: -8%;
+      }
+      @include media-tablet-horizontal {
+        right: 0%;
+        bottom: 4%;
       }
       @include media-mobile {
         right: 20%;
