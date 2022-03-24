@@ -1,0 +1,45 @@
+.answer {
+  display: flex;
+  align-items: center;
+  padding: rem(80) 0;
+  &__list {
+    font-size: rem(26);
+  }
+  &__item {
+    margin-bottom: rem(22);
+    &:first-child {
+      padding-left: rem(120);
+    }
+    &:nth-child(2) {
+      padding-left: rem(86);
+    }
+    &:nth-child(3) {
+      padding-left: rem(28);
+    }
+    &:nth-child(4) {
+      padding-left: rem(160);
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__icon {
+    padding: 0 rem(20);
+    font-family: Cocogoose;
+    @include font-source(rem(220), 650);
+    opacity: 0.07;
+  }
+  &__text {
+    text-align: center;
+    margin-top: rem(40);
+    font-size: rem(24);
+  }
+  &__budget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: rem(62);
+    padding-bottom: rem(120);
+  }
+}

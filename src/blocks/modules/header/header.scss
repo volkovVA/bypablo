@@ -1,0 +1,39 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: rem(16);
+  padding: rem(60) 0;
+  .logo {
+    &::after {
+      height: 100%;
+      bottom: rem(100);
+      right: rem(144);
+    }
+  }
+  &__title {
+    @include font-source(rem(26), 400);
+    text-align: right;
+    text-transform: uppercase;
+  }
+  &__logo {
+    grid-area: 1/1/3/2;
+    align-self: center;
+  }
+  &__contact {
+    position: relative;
+    justify-self: end;
+    align-self: center;
+    margin-right: rem(70);
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: rem(50);
+      height: 10px;
+      top: rem(15);
+      right: rem(-60);
+      background: $default-color;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.contact {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  @include font-source(26px, 300);
+  &__number {
+    position: relative;
+    font-family: Jost;
+    margin-right: rem(20);
+    cursor: url(../img/svg/cursor-big.svg), pointer;
+  }
+}

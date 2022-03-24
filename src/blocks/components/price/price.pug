@@ -1,0 +1,20 @@
+include ../../components/contact-list/contact-list.pug
+include ../../components/budget-btn/budget-btn.pug
+
+-
+  const priceList = [
+    'El precio depende de la cantidad de fotos y de la ubicación. Una sesión de 10-20 fotos de un piso en Barcelona cuesta 50-80€ + IVA.',
+    'Si estás interesado en más fotos u otras áreas, responde a 3 preguntas, obtén el presupuesto e instrucciones sobre cómo preparar el espacio para la sesión fotográfica.'
+  ]
+
+section.price
+  h2.title.price__title CUÁNTO CUESTA
+  .price__column
+    ul.price__list
+      each item in priceList
+        li.price__item= item
+      li.price__item Si tienes más preguntas póngate en contacto conmigo.#[br]Haz #[a.price__click(href="https://wa.me/+79153777981") clic] para acceder directamente al WhatsApp.
+    .price__box
+      .price__btn
+        +budget-btn
+      +contact-list('Pavel Adahskevich', '+34675371987', '+34 675 371 987 ', 'photo@bypablo.ru')

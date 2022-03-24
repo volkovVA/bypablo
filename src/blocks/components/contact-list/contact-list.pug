@@ -1,0 +1,9 @@
+
+mixin contact-list(name, hrefTel, tel, email)
+  ul.contact-list
+    li.contact-list__item
+      span.contact-list__name= name
+    li.contact-list__item
+      a.contact-list__number(href="tel:" + hrefTel)= tel
+    li.contact-list__item
+      a.contact-list__email(href="mailto:" + email)= email

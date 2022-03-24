@@ -1,0 +1,22 @@
+-
+  const stepsList = [
+    {number:'#1', text:'Escoje una hora'},
+    {number:'#2', text:'Hacemos las fotos'},
+    {number:'#3', text:'Elígelas'},
+    {number:'#4', text:'Las recibirás en 2 días '},
+  ]
+
+section.steps
+  h2.title.steps__title CÓMO PROCEDEMOS
+  ul.steps__list
+    each item, index in stepsList
+      if index === 1
+        li.steps__item
+          svg.steps__icon.steps__icon--color
+            use(xlink:href="./img/svg/sprite.svg" + item.number)
+          span.steps__text= item.text
+      else
+        li.steps__item
+          svg.steps__icon
+            use(xlink:href="./img/svg/sprite.svg" + item.number)
+          span.steps__text= item.text

@@ -1,0 +1,47 @@
+.price {
+  padding: rem(80) 0;
+  &__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(86);
+    &::before {
+      content: '';
+      display: block;
+      width: 22%;
+      height: 12px;
+      margin-right: rem(20);
+      background: $default-color;
+    }
+  }
+  &__column {
+    display: flex;
+  }
+  &__list {
+    flex-basis: 50%;
+  }
+  &__item {
+    margin-bottom: rem(42);
+    text-align: right;
+    @include font-source(rem(22), 300);
+    &:first-child {
+      margin-left: auto;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__click {
+    position: relative;
+    color: $default-color;
+    cursor: url(../img/svg/cursor-big.svg), pointer;
+    z-index: 1;
+  }
+  &__box {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

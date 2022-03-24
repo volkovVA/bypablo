@@ -1,0 +1,24 @@
+$animation_reveal-duration: 1s;
+$animation_reveal-stagger: $animation_reveal-duration / 2;
+
+body {
+  cursor: url(../img/svg/cursor.svg), pointer;
+}
+
+.cursor {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: url(../img/svg/cursor-orange.svg);
+  background-size: 10px 10px;
+  z-index: 1;
+  opacity: 0.5;
+  transition: ease-in 0.05s;
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.cursor-hidden {
+  display: none;
+}

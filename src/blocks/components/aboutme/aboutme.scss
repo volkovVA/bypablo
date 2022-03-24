@@ -1,0 +1,80 @@
+.aboutme {
+  padding: rem(80) 0;
+  &__title {
+    position: absolute;
+    width: rem(400);
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: rem(22);
+  }
+  &__item {
+    @include media-tablet {
+      width: 100%;
+      &:first-child {
+        order: 1;
+      }
+      &:nth-child(2) {
+        order: 0;
+      }
+      &:nth-child(3) {
+        order: 3;
+      }
+      &:nth-child(4) {
+        order: 2;
+      }
+      &:nth-child(5) {
+        order: 5;
+      }
+      &:nth-child(6) {
+        order: 4;
+      }
+      &:nth-child(7) {
+        order: 7;
+      }
+      &:nth-child(8) {
+        order: 6;
+      }
+    }
+    &--image {
+      justify-self: self-end;
+    }
+    &--text {
+      @include font-source(rem(22), 300);
+      align-self: self-end;
+    }
+    &:nth-child(4),
+    &:last-child {
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 12px;
+        background: $default-color;
+        z-index: -1;
+      }
+    }
+    &:nth-child(4) {
+      &:after {
+        height: rem(40);
+        right: 20%;
+        bottom: -10%;
+      }
+    }
+    &:last-child {
+      &:after {
+        height: rem(80);
+        left: 20%;
+        bottom: -20%;
+      }
+    }
+  }
+  &__photo {
+    width: rem(640);
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.15rem;
+  }
+}

@@ -1,0 +1,57 @@
+.steps {
+  padding: rem(80) 0;
+  &__title {
+    position: relative;
+    padding-right: rem(34);
+    margin-bottom: rem(100);
+    text-align: right;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__text {
+    position: absolute;
+  }
+  &__item {
+    position: relative;
+    font-size: rem(24);
+    margin-left: rem(-120);
+    &:first-child {
+      .steps__text {
+        top: 24%;
+        right: -42%;
+      }
+    }
+    &:nth-child(2) {
+      .steps__text {
+        top: 54%;
+        right: 6%;
+        text-align: right;
+      }
+    }
+    &:nth-child(3) {
+      .steps__text {
+        top: 14%;
+        right: -3%;
+      }
+    }
+    &:last-child {
+      .steps__text {
+        width: rem(200);
+        top: 40%;
+        right: -12%;
+        text-align: right;
+      }
+    }
+  }
+  &__icon {
+    height: rem(160);
+    fill: $main-color;
+    fill-opacity: 0.1;
+    &--color {
+      fill: $default-color;
+      fill-opacity: 0.65;
+    }
+  }
+}

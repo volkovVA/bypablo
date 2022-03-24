@@ -1,0 +1,41 @@
+include ../../components/budget-btn/budget-btn.pug
+
+-
+  const mainPhotosTop = [
+    {src:'./img/photo@2x.jpeg', srcset:'./img/photo@2x.jpeg 1.25x, ./img/photo@3x.jpeg 2.25x', alt:'habitación'},
+    {src:'./img/photo@2x.jpeg', srcset:'./img/photo@2x.jpeg 1.25x, ./img/photo@3x.jpeg 2.25x', alt:'habitación'},
+    {src:'./img/photo@2x.jpeg', srcset:'./img/photo@2x.jpeg 1.25x, ./img/photo@3x.jpeg 2.25x', alt:'habitación'},
+    {src:'./img/photo@2x.jpeg', srcset:'./img/photo@2x.jpeg 1.25x, ./img/photo@3x.jpeg 2.25x', alt:'habitación'}
+  ]
+
+-
+  const mainPhotosBottom = [
+    {src:'./img/photo@2x.jpeg', srcset:'./img/photo@2x.jpeg 1.25x, ./img/photo@3x.jpeg 2.25x', alt:'habitación'},
+    {src:'./img/photo@2x.jpeg', srcset:'./img/photo@2x.jpeg 1.25x, ./img/photo@3x.jpeg 2.25x', alt:'habitación'},
+    {src:'./img/photo@2x.jpeg', srcset:'./img/photo@2x.jpeg 1.25x, ./img/photo@3x.jpeg 2.25x', alt:'habitación'},
+    {src:'./img/photo@2x.jpeg', srcset:'./img/photo@2x.jpeg 1.25x, ./img/photo@3x.jpeg 2.25x', alt:'habitación'}
+  ]
+
+-
+  const mainTexts = [
+  'Quieres aumentar el número de visitas',
+  'Pocas llamadas después del anuncio',
+  'Necesitas vender un piso más rápido',
+  'Quieres que tu anuncio destaque',
+  'Las fotos del móvil se ven poco atractivas'
+  ]
+
+main.main
+  ul.main__list.main__list--top
+    each photo in mainPhotosTop
+      li.main__item
+        img.main__photo(src= photo.src srcset= photo.srcset alt= photo.alt)
+  include ../../components/answer/answer.pug
+  include ../../components/aboutme/aboutme.pug
+  include ../../components/steps/steps.pug
+  include ../../components/reviews/reviews.pug
+  include ../../components/price/price.pug
+  ul.main__list.main__list--bottom
+    each photo in mainPhotosBottom
+      li.main__item
+        img.main__photo(src= photo.src srcset= photo.srcset alt= photo.alt)

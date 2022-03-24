@@ -1,0 +1,26 @@
+.contact-list {
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include font-source(rem(26), 300);
+    margin-bottom: rem(13);
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &::before {
+      content: '';
+      display: block;
+      width: rem(36);
+      height: 10px;
+      margin-right: rem(10);
+      background: $default-color;
+    }
+  }
+  &__number {
+    cursor: url(../img/svg/cursor-big.svg), pointer;
+  }
+  &__email {
+    cursor: url(../img/svg/cursor-big.svg), pointer;
+  }
+}
