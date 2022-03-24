@@ -1,13 +1,27 @@
 .aboutme {
   padding: rem(80) 0;
+  @include media-mobile-min {
+    padding: rem(40) 0;
+  }
   &__title {
     position: absolute;
     width: rem(400);
+    @include media-custom(1160px) {
+      position: relative;
+    }
+    @include media-tablet {
+      width: 100%;
+      text-align: center;
+      margin-bottom: rem(40);
+    }
   }
   &__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: rem(22);
+    @include media-mobile {
+      display: block;
+    }
   }
   &__item {
     @include media-tablet {
@@ -39,10 +53,16 @@
     }
     &--image {
       justify-self: self-end;
+      @include media-mobile {
+        margin-bottom: rem(40);
+      }
     }
     &--text {
       @include font-source(rem(22), 300);
       align-self: self-end;
+      @include media-mobile {
+        margin-bottom: rem(40);
+      }
     }
     &:nth-child(4),
     &:last-child {
@@ -58,7 +78,7 @@
     }
     &:nth-child(4) {
       &:after {
-        height: rem(40);
+        height: rem(100);
         right: 20%;
         bottom: -10%;
       }

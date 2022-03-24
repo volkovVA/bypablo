@@ -1,4 +1,7 @@
 .logo {
   display: block;
   cursor: url(../img/svg/cursor-big.svg), pointer;
+  @include media-mobile {
+    width: rem(200);
+  }
 }

@@ -1,10 +1,20 @@
 .reviews {
   display: flex;
   padding: rem(80) 0;
+  @include media-mobile-min {
+    padding: rem(40) 0;
+  }
+  @include media-tablet {
+    flex-direction: column;
+  }
   &__title {
     position: relative;
     align-self: center;
     margin-right: rem(50);
+    @include media-tablet {
+      margin-right: 0;
+      margin-bottom: rem(40);
+    }
     &::after {
       @include media-tablet {
         content: '';
@@ -13,7 +23,7 @@
         width: rem(8);
         height: rem(60);
         top: 10%;
-        left: 80%;
+        left: 100%;
         background: $default-color;
       }
     }

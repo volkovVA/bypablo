@@ -1,5 +1,8 @@
 .price {
   padding: rem(80) 0;
+  @include media-mobile-min {
+    padding: rem(40) 0;
+  }
   &__title {
     position: relative;
     display: flex;
@@ -16,9 +19,15 @@
   }
   &__column {
     display: flex;
+    @include media-tablet {
+      flex-direction: column;
+    }
   }
   &__list {
     flex-basis: 50%;
+    @include media-tablet {
+      margin-bottom: rem(60);
+    }
   }
   &__item {
     margin-bottom: rem(42);
@@ -43,5 +52,10 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+  }
+  &__btn {
+    @include media-tablet {
+      margin-bottom: rem(60);
+    }
   }
 }

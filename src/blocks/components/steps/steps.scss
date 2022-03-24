@@ -1,5 +1,8 @@
 .steps {
   padding: rem(80) 0;
+  @include media-mobile-min {
+    padding: rem(40) 0;
+  }
   &__title {
     position: relative;
     padding-right: rem(34);
@@ -9,49 +12,100 @@
   &__list {
     display: flex;
     justify-content: space-around;
+    @include media-tablet {
+      flex-direction: column;
+    }
   }
   &__text {
     position: absolute;
+    @include media-tablet {
+      position: relative;
+    }
   }
   &__item {
     position: relative;
     font-size: rem(24);
     margin-left: rem(-120);
+    @include media-tablet {
+      display: flex;
+      align-items: center;
+      margin-left: 0;
+      margin-bottom: rem(20);
+    }
     &:first-child {
       .steps__text {
         top: 24%;
         right: -42%;
+        @include media-tablet {
+          top: 0;
+          right: -10%;
+        }
       }
     }
     &:nth-child(2) {
+      @include media-tablet {
+        padding-left: rem(80);
+      }
+      @include media-mobile-min {
+        padding-left: 0;
+      }
       .steps__text {
-        top: 54%;
-        right: 6%;
+        top: 50%;
+        right: -30%;
         text-align: right;
+        @include media-tablet {
+          top: 0;
+          right: -10%;
+        }
       }
     }
     &:nth-child(3) {
+      @include media-tablet {
+        padding-left: rem(140);
+      }
+      @include media-mobile-min {
+        padding-left: 0;
+      }
       .steps__text {
         top: 14%;
         right: -3%;
+        @include media-tablet {
+          top: 0;
+          right: -10%;
+        }
       }
     }
     &:last-child {
+      @include media-tablet {
+        padding-left: rem(200);
+      }
+      @include media-mobile-min {
+        padding-left: 0;
+      }
       .steps__text {
         width: rem(200);
         top: 40%;
         right: -12%;
         text-align: right;
+        @include media-tablet {
+          top: 0;
+          right: -10%;
+        }
       }
     }
   }
   &__icon {
+    width: rem(100);
     height: rem(160);
     fill: $main-color;
     fill-opacity: 0.1;
     &--color {
       fill: $default-color;
       fill-opacity: 0.65;
+    }
+    @include media-tablet {
+      width: rem(70);
+      height: rem(130);
     }
   }
 }

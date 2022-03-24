@@ -5,6 +5,13 @@
     grid-template-rows: 1fr 1fr;
     grid-gap: rem(22);
     padding: rem(80) 0;
+    @include media-mobile {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    @include media-mobile-min {
+      padding: rem(40) 0;
+    }
     &--top {
       .main__item {
         &:first-child,
@@ -29,10 +36,10 @@
         }
         &:nth-child(2) {
           &::after {
-            width: rem(40);
+            width: rem(60);
             height: 12px;
             bottom: 20%;
-            left: -4%;
+            left: -10%;
           }
         }
         &:last-child {
@@ -60,18 +67,18 @@
         }
         &:first-child {
           &::after {
-            height: rem(40);
+            height: rem(100);
             width: 12px;
-            bottom: -7%;
+            bottom: -10%;
             left: 30%;
           }
         }
         &:nth-child(3) {
           &::after {
-            width: rem(40);
+            width: rem(100);
             height: 12px;
             bottom: 60%;
-            right: -5%;
+            right: -10%;
           }
         }
       }

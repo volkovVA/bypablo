@@ -2,6 +2,13 @@
   display: flex;
   align-items: center;
   padding: rem(80) 0;
+  @include media-tablet {
+    flex-direction: column;
+    justify-content: center;
+  }
+  @include media-mobile-min {
+    padding: rem(40) 0;
+  }
   &__list {
     font-size: rem(26);
   }
@@ -28,6 +35,9 @@
     font-family: Cocogoose;
     @include font-source(rem(220), 650);
     opacity: 0.07;
+    @include media-tablet {
+      font-size: rem(100);
+    }
   }
   &__text {
     text-align: center;
@@ -41,5 +51,8 @@
     justify-content: space-around;
     padding-top: rem(62);
     padding-bottom: rem(120);
+    @include media-tablet {
+      padding: 0;
+    }
   }
 }

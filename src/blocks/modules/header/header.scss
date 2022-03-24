@@ -4,6 +4,13 @@
   grid-template-rows: 1fr 1fr;
   grid-gap: rem(16);
   padding: rem(60) 0;
+  @include media-tablet {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  @include media-mobile {
+    padding: rem(40) 0;
+  }
   .logo {
     &::after {
       height: 100%;
@@ -15,10 +22,16 @@
     @include font-source(rem(26), 400);
     text-align: right;
     text-transform: uppercase;
+    @include media-mobile {
+      text-align: left;
+    }
   }
   &__logo {
     grid-area: 1/1/3/2;
     align-self: center;
+    @include media-tablet {
+      justify-self: center;
+    }
   }
   &__contact {
     position: relative;
